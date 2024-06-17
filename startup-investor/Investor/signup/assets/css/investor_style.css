@@ -1,0 +1,297 @@
+:root {
+  --primary-color: rgb(0, 0, 0);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  display: grid;
+  min-height: 60vh;
+}
+form{
+  place-items: center;
+}
+/* Global Stylings */
+label {
+  display: block;
+  margin: 0.75rem;
+
+}
+
+label[for='M'],label[for='F']{
+  transform: translate(-17px, -3.5px);
+}
+
+input {
+  display: block;
+  width: 300px;
+  border: 0;
+  margin: 0.75rem;
+  border-bottom: 1px solid #666;
+  background-color: transparent;
+}
+
+input:focus{
+  outline: none !important;
+  background-color: transparent;
+}
+
+.g-inline{
+  display: flex !important;
+  transform: translate(0px, -6px);
+}
+
+input[type="radio"]{
+  box-sizing: border-box;
+  margin: 0.75rem;
+  padding: 0;
+}
+
+.input-group.r.gender {
+  width: 200px;
+  transform: translate(-126px, 0px);
+  height: 74px;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Progressbar */
+.progressbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  counter-reset: step;
+  margin: 2rem 14rem 4rem;
+}
+
+.progressbar::before,
+.progress {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  background-color: #dcdcdc;
+  z-index: -1;
+}
+
+.progress {
+  background-color: var(--primary-color);
+  width: 0%;
+  transition: 0.3s;
+}
+
+.progress-step {
+  width: 2.1875rem;
+  height: 2.1875rem;
+  background-color: #dcdcdc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-step::before {
+  counter-increment: step;
+  content: counter(step);
+}
+
+
+.progress-step-active {
+  background-color: var(--primary-color);
+  color: #f3f3f3;
+}
+
+/* Form */
+.form {
+  width: clamp(800px, 30%, 430px);
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.form-step {
+  display: none;
+  transform-origin: top;
+  animation: animate 0.5s;
+}
+
+.form-step-active {
+  display: block;
+}
+
+
+
+@keyframes animate {
+  from {
+    transform: scale(1, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+
+.btn {
+  padding: 0.75rem;
+  display: block;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: #f3f3f3;
+  text-align: center;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+}
+
+.r{
+float: right;
+}
+
+.l{
+float: left;
+}
+
+.clr{
+  clear: both;
+}
+
+.required{
+  color: red;
+}
+
+.cap{
+  transform: translate(-8px, -4px);
+}
+
+button[type='button']{
+  transform: translate(12px, 22px);
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 403px;
+  height: 200px;
+  position: relative;
+  transition: all 2s ease-in-out;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+
+#describe {
+  background: transparent;
+  width: 300px;
+  transform: translate(14px, -8px);
+  border: 1px solid #666;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+.input-group.r.inv-bef {
+  width: 320px;
+}
+
+.inv-inline {
+  display: flex;
+  transform: translate(0px, -7px);
+  width: 168px;
+}
+
+
+input[name="hear_about_platform"]{
+  width: 12px;
+}
+
+.plat-inline{
+  display: flex;
+  align-items: center;
+}
+
+input[name="certify"]{
+  width: 15px;
+}
+
+.submit-btn {
+  transform: translate(387px, -21px);
+}
+
+/*-----------------Header----------------------*/
+.header{
+    font-family: "Sofia", sans-serif;
+}
+
+.header > .logo{
+  float: left;
+  margin-left: 30px;
+}
+
+.header > nav{
+  float: right;
+  margin: 30px;
+}
+
+.header > nav >li{
+  display: inline;
+  text-decoration: none;
+  padding: 10px;
+  font-size: large;
+  font-weight: bold;
+}
+
+/*---------------------------------------------*/
+
+a{
+  color: black;
+  font-size: large;
+}

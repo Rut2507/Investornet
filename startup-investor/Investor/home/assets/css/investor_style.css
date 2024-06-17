@@ -1,0 +1,509 @@
+.item1 { grid-area: header;}
+        .item2 { grid-area: menu; width: 200px; }
+        .item3 { grid-area: main; overflow-y: scroll;padding: 10px;}
+        
+        .grid-container {
+          display: grid;
+          grid-template-areas:
+            'header header header header header header'
+            'menu main main main main main'
+            'menu main main main main main'
+            'menu main main main main main'
+            'menu main main main main main'
+            'menu main main main main main'
+            'menu main main main main main'
+            'menu main main main main main'
+            'menu main main main main main';
+          gap: 2px;
+          padding: 10px;
+          grid-template-columns: min-content auto;
+          grid-template-rows: max-content;
+          height: 680px;
+        }
+
+
+        body{
+            font-family: "Sofia", sans-serif; 
+            background-color: #ffffff7e;
+        }
+        header{
+            margin: 20px;
+            position: fixed;
+            top: 0;
+        }
+        .log{
+            float: right;
+            display: flex;
+            align-items: center;
+            column-gap: 20px;
+        }
+        .log  > b,a{
+            font-size: x-large;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .logo{
+            float: left;
+            transform: translate(10px, -20px);
+        }
+        .clr{
+            clear: both;
+        }
+
+        ::-webkit-scrollbar{
+            width: 3px;
+            border-radius: 25px;
+            }
+            ::-webkit-scrollbar-track{
+            background: #f1f1f1;
+            }
+            ::-webkit-scrollbar-thumb{
+            background: #ddd;
+            }
+            ::-webkit-scrollbar-thumb:hover{
+            background: #ccc;
+            }
+            
+
+        .sidenav a {
+            padding: 6px 0px 6px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #000000;
+            display: inline-flex;
+        }
+        .sidenav hr{
+            border: 1px solid black;
+            width: 75%;
+            margin: 10px;
+            background-color: #000000;
+        }
+
+        .chatbot > img{
+            float: right;
+        }
+        
+        .popup{
+            display: none;
+            width: 300px;
+            height: 400px;
+            position: fixed;
+            top: 170px;
+            left: 1200px;
+            background-color: rgb(255, 255, 255);
+            padding: 10px;
+            
+        }
+
+        .close{
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .clr{
+            clear: both;
+        }
+
+.account{
+    padding: 10px;
+}
+
+.acc-setting-form  > form{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.acc-setting-form > form > div{
+    margin: 10px;
+    padding: 10px;
+    width: max-content;
+}
+
+.acc-setting-form > form > div > label{
+    font-size: larger;
+    font-weight: bold;
+}
+
+.acc-setting-form > form > div > input,select{
+    width: 300px;
+    padding: 10px;
+    border: 0px;
+    border-bottom: 2px solid black;
+    font-size: large;
+    background-color: transparent;
+} 
+
+.acc-setting-form > form > div >button,.acc-pass-form > form > div >button{
+    background-color: #000000;
+    color: #fff;
+    padding: 10px;
+    font-size: large;
+    border-radius: 5px;
+    margin: 10px;
+    
+}
+
+.acc-setting-form > form > div >button:hover,.acc-pass-form > form > div >button:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    cursor: pointer;
+}
+
+.acc-pass-form > form{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.break {
+    flex-basis: 100%;
+    height: 0;
+}  
+
+.acc-pass-form > form > div{
+    margin: 10px 10px 5px 10px;
+    padding: 10px;
+    width: max-content;
+    background-color: transparent;
+}
+
+.acc-pass-form > form > div > label{
+    font-size: larger;
+    font-weight: bold;
+}
+
+.acc-pass-form > form > div > input{
+    width: 300px;
+    padding: 10px;
+    border: 0px;
+    border-bottom: 2px solid black;
+    font-size: large;
+    background-color: transparent;
+} 
+
+.account > hr{
+    border: 1px solid rgb(0, 0, 0);
+    background-color: #464646;
+    width: 500px;
+}
+
+.acc-pass-form > form > div > input:focus,.acc-setting-form > form > div > input:focus{
+    outline: none;
+}
+/*----------------Dashboard--------------------*/
+.div-box-dashboard{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 30px;
+}
+
+.div-box-dashboard > .box1,.box3{
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 75px;
+    width: 200px;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 5px 10px #636363;
+    color: rgb(0, 0, 0);
+    font-size: larger;
+    text-align: center;
+
+
+}
+
+.div-box-dashboard > .box2{
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 75px;
+    width: 200px;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 5px 10px #2e2828;
+    font-size: larger;
+    text-align: center;
+
+
+}
+/*-----------------Search Bar------------------*/
+
+.search-bar >form> input{
+    border: 0;
+    border-bottom: 3px solid black;
+    width: 400px;
+    background-color: transparent;
+}
+
+.search-bar >form> input::placeholder{
+    font-size: larger;
+}
+
+.search-bar >form> input:focus{
+    outline: none;
+    background-color: transparent;
+}
+
+.search-bar{
+    display: flex;
+    justify-content: center;
+}
+/*--------------------Profile card--------------------*/
+.startup-profile {
+    width: 250px;
+    height: auto;
+    background: linear-gradient(to right, #b7b7b7b7, #8dbddb94);
+    box-shadow: 3px 3px 3px 3px rgb(172, 172, 172);
+    border-radius: 20px;
+}
+.startup-profile .front-cover {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    align-items: center;
+    text-align: center;
+}
+.front-cover{
+    color: rgb(0, 0, 0);
+
+}
+
+.front-cover > img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 5px;
+    transform: translate(0px,10px);
+}
+
+.front-cover > h1,h2,h3{
+    margin: 0;
+}
+
+.front-cover > h1{
+    color: #605dff;
+}
+.profile-flex{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    column-gap: 60px;
+    row-gap: 30px;
+}
+
+
+/*-------------------notification--------------------------------*/
+
+.notification_wrap .notification_icon{
+	position: relative;
+	font-size: 32px;
+	margin: 0 auto;
+	text-align: center;
+	color: #605dff;
+}
+
+.notification_wrap .notification_icon .fa-bell{
+	cursor: pointer;
+}
+
+.notification_wrap .dropdown{
+	width: 350px;
+    height: auto;
+	max-height: 400px;
+	background: rgb(202, 202, 202);
+	border-radius: 5px;
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.125);
+	margin: 10px auto 0;
+	padding: 15px;
+	position: absolute;
+	display: none;
+    overflow-y: scroll;
+    z-index: 1000;
+    transform: translate(-170px,0px);
+}
+
+.notification_wrap .dropdown .notify_item{
+	display: flex;
+	align-items: center;
+	padding: 10px 0;
+	border-bottom: 1px solid #dbdaff;
+}
+
+.notification_wrap .dropdown .notify_item:last-child{
+	border-bottom: 0px;
+}
+
+.notification_wrap .dropdown .notify_item .notify_img{
+	margin-right: 15px;
+}
+
+.notification_wrap .dropdown .notify_item .notify_info p{
+	margin-bottom: 5px;
+}
+
+.notification_wrap .dropdown .notify_item .notify_info p span{
+	color: #605dff;
+	margin-left: 5px;
+}
+
+.notification_wrap .dropdown .notify_item .notify_info .notify_time{
+	color: #c5c5e6;
+	font-size: 12px;
+}
+
+.notification_wrap .dropdown:before{
+	content: "";
+	position: absolute;
+	top: -30px;
+	left: 50%;
+	transform: translateX(-50%);
+	border: 15px solid;
+	border-color: transparent transparent #fff transparent;
+}
+
+.notification_wrap .dropdown.active{
+	display: block;
+}
+
+/*------------profile picture------------------*/
+#profile-container{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+
+#profile-container img {
+    width: 150px;
+    height: 150px;
+}
+
+/*connection profile*/
+con-p {
+    margin: 0.25rem;
+  }
+  
+  .con-card {
+    position: relative;
+    margin-top: 20px;
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
+    background: linear-gradient(to right, #161616b7, #363b3f94);
+    width: clamp(20rem, 10rem, 30rem);
+    border-radius: 0.5rem;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .con-card::before {
+    --space: 1rem;
+  
+    content: attr(data-title);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: calc(var(--space) / 2);
+    left: calc(var(--space) / 2);
+    width: calc(100% - var(--space));
+    height: calc(100% - var(--space));
+    background-color: rgba(0, 0, 0, 0.734);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    backdrop-filter: blur(0.1rem);
+    border-radius: 0.5rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .con-card:hover:before {
+    height: auto;
+    top: 0;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+  }
+
+.myfriend{
+    border: 3px solid black;
+    text-align: center;
+    border-radius: 10px;
+    background: linear-gradient(to right, #ff8b9cb7, #87caf394);
+}
+  
+.width-100{
+    width: 100%;
+}
+
+
+.flex-connection{
+    display: flex;
+    column-gap: 20px;
+}
+/*message*/
+
+/*profile page*/
+.profile-cover{
+    background-color: #62617266;
+    border-radius: 12px;
+    height:200px;
+}
+
+#profile-Pic{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 5%;
+    float: right;
+    transform: translate(-50px,50px);
+}
+
+
+#profile-Pic img {
+    width: 200px;
+    height: 200px;
+}
+
+
+/**/
+/*--------------------------------------*/
+
+.box > table{
+    width: 90%;
+    text-align: center;
+    background-color: transparent;
+}
+
+.box > table,td,th{
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: medium;
+    font-weight: bold;
+
+}
+
+td,th{
+    background-color: rgba(255, 255, 255, 0.371);
+}
+th{
+    font-size: large;
+}
+
+/*-------------------------------------*/
+.inv_b{
+    background-color: #000000;
+    color: white;
+    border-radius: 3px;
+}

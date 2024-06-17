@@ -1,0 +1,193 @@
+
+
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; width: 200px; }
+.item3 { grid-area: main;overflow-y: hidden;}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+	'header header header header header header'
+	'menu main main main main main'
+	'menu main main main main main'
+	'menu main main main main main';
+  gap: 2px;
+  padding: 10px;
+  grid-template-columns: min-content auto;
+  grid-template-rows: max-content;
+  height: 680px;
+}
+
+
+body{
+	font-family: "Sofia", sans-serif;
+	background-color: #ffffff;
+}
+header{
+	margin: 20px;
+}
+.log{
+	font-size: x-large;
+	float: right;
+}
+a{
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+}
+.logo{
+	float: left;
+	transform: translate(10px, -20px);
+}
+.clr{
+	clear: both;
+}
+
+
+
+.sidenav a {
+	padding: 6px 0px 6px 16px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #000000;
+	display: inline-flex;
+}
+.sidenav hr{
+	border: 1px solid black;
+	width: 25%;
+	margin: 10px;
+}
+
+
+
+.clr{
+	clear: both;
+}
+
+
+
+
+
+
+::selection{
+color: #fff;
+background: #007bff;
+}
+
+::-webkit-scrollbar{
+width: 3px;
+border-radius: 25px;
+}
+::-webkit-scrollbar-track{
+background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb{
+background: #ddd;
+}
+::-webkit-scrollbar-thumb:hover{
+background: #ccc;
+}
+
+
+.div-dashboard{
+	display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+	row-gap: 20px;
+	justify-content: center;
+	column-gap: 35px;
+	margin: 20px;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+} 
+
+.div-dashboard > .box1{
+	display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+	justify-content: center;
+	width: 80%;
+	background-color: #ffffff;
+	text-align: center;
+	box-shadow: 0px 0px 5px 10px rgba(188, 176, 255, 0.603);
+	border-radius: 30px;
+	height: 150px;
+	column-gap: 20px;
+}
+
+.div-dashboard > .box2{
+	width: 48%;
+	background-color: #ffffff;
+	text-align: center;
+	box-shadow: 0px 0px 5px 10px rgba(255, 163, 247, 0.459);
+	border-radius: 30px;
+	height: 350px;
+	
+}
+
+.div-investor > .box , .div-startup > .box{
+	width: 1200px;
+	box-shadow: 0px 0px 5px 2px rgba(207,207,207,1);
+	background-color: #ffffff;
+	height: 280px;
+	border-radius: 10px;
+	margin: 20px;
+	padding: 10px;
+	overflow-y: scroll;
+}
+
+.box1 > #total-User{
+	height: 125px;
+	width: 275px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 5px 4px rgb(255, 204, 204);
+	font-size: x-large;
+	font-weight: bold;
+}
+
+#chartContainer{
+	border-radius: 30px;
+}
+
+.div-startup > .box > table{
+	margin: 10px;
+	width: 1150px;
+}
+.div-investor > .box > table{
+	margin: 10px;
+	width: 1150px;
+}
+table,th,td{
+	border: 2px solid black;
+	text-align: center;
+	border-radius: 5px;
+	font-weight: bold;
+}
+
+table{
+	background-color: #0084ffb9;
+}
+th{
+	background-color: #003c7c9d;
+	color: #fff;
+}
+tr{
+	background-color: #f1f1f1;
+	
+}
+
+.verify{
+	background-color: #3cff008f;
+	border-radius: 5px;
+	width: 90%;
+	transform: translateY(8px);
+}
+
+.edit{
+	background-color: #fffb0093;
+	border-radius: 5px;
+	width: 90%;
+	transform: translateY(8px);
+}

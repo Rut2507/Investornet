@@ -1,0 +1,279 @@
+:root {
+  --primary-color: rgb(0, 0, 0);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  min-height: 60vh;
+}
+/* Global Stylings */
+label {
+  display: block;
+  margin: 0.75rem;
+}
+
+input{
+  display: block;
+  width: 300px;
+  padding: 0.75rem;
+  border: 0px;
+  border-bottom: 1px solid #666;
+  background-color: transparent;
+}
+
+#sector,#stage{
+  background-color: transparent;
+}
+input:focus,#sector:focus,#stage:focus{
+  outline: none !important;
+  background-color: transparent;
+}
+
+
+.width-50 {
+  width: 50%;
+}
+.width-100 {
+  width: 100%;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Progressbar */
+.progressbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  counter-reset: step;
+  margin: 2rem 14rem 4rem;
+}
+
+.progressbar::before,
+.progress {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  background-color: #dcdcdc;
+  z-index: -1;
+}
+
+.progress {
+  background-color: var(--primary-color);
+  width: 0%;
+  transition: 0.3s;
+}
+
+.progress-step {
+  width: 2.1875rem;
+  height: 2.1875rem;
+  background-color: #dcdcdc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-step::before {
+  counter-increment: step;
+  content: counter(step);
+}
+
+.progress-step::after {
+  content: attr(data-title);
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.progress-step-active {
+  background-color: var(--primary-color);
+  color: #f3f3f3;
+}
+
+/* Form */
+.form {
+  width: clamp(650px, 30%, 430px);
+  margin: 0 auto;
+}
+
+.form-step {
+  display: none;
+  transform-origin: top;
+  animation: animate 0.5s;
+}
+
+.form-step-active {
+  display: block;
+}
+
+
+@keyframes animate {
+  from {
+    transform: scale(1, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+/* Button */
+.btns-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.btn {
+  padding: 0.75rem;
+  display: block;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: #f3f3f3;
+  text-align: center;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+}
+
+
+.inline{
+  display: flex !important;
+  align-items: center;
+  width: 150px;
+}
+
+.required{
+  color: red;
+}
+
+.r{
+  float: right;
+}
+
+.l{
+  float: left;
+}
+.clr{
+  clear: both;
+}
+
+input[type="text"],input[type="url"],input[type="tel"],input[type="email"],#sector,#stage,#inception_date{
+  transform: translate(10px,0px);
+}
+
+.gen{
+  transform: translate(1px,0px);
+}
+
+input[ name="gender"]{
+  transform: translate(3px,0px);
+}
+.founder{
+  transform: translate(0px,-6px);
+}
+
+.add{
+  cursor: pointer;
+  }
+
+#conditional {
+  display: none;
+}
+  
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 403px;
+  height: 200px;
+  position: relative;
+  transition: all 2s ease-in-out;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+#sector,#stage{
+  width: 300px;
+  display: block;
+  border: 0;
+  border-bottom: 1px solid #666;
+  padding: 0.75rem;
+}
+/*-----------------Header----------------------*/
+.header{
+  font-family: "Sofia", sans-serif;
+  width: 100%;
+}
+
+.header > .logo{
+float: left;
+margin-left: 30px;
+}
+
+.header > nav{
+float: right;
+margin: 30px;
+}
+
+.header > nav >li{
+display: inline;
+text-decoration: none;
+padding: 10px;
+font-size: large;
+font-weight: bold;
+}
+
+/*---------------------------------------------*/
+
+a{
+  color: black;
+}
